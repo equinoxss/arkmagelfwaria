@@ -1,0 +1,26 @@
+w	w	w	w																								
+w	.	.	w																								
+w	.	.	w				w	w	w	w	w	w	w	w	w	w	w	w									
+w	.	.	w	w	w	w	w	.	.	.	.	.	.	.	.	.	.	w									
+w	.	.	.|d:v:c	.	.	.	.|d:v:c	.	.	.	.	.	.	.	.	.	.	w									
+w	.	.	w	w:l	w:l	w:l	w	.	.	.|Msk:1	.	.|Msk:1	.	.	.	.	.	w									
+w	.	.	w				w	w:l	w:l	w	.|d:h:c	w	w:l	w:l	d	w:l	w:l	w									
+w	.	.	w				w	.	.	w	.	w	.|Msk:1	.	.	.	.|Msk:1	w									
+w	w:l	w:l	w				w	.	.	w	.	w	.	.	.	.	.	w									
+							w	.	.	w	.	w	.	.	.	.	.	w									
+				w	w	w	w	.	.	w	.	w	.	.	.|c:K	.	.	w									
+				w	.|c:c:G*2	w	w	.	.	.|d:v:c	.	w	w:l	w:l	w	w:l	w:l	w									
+				w	.	w	w	.	.	w	.	w	.	.|c:c:G	w												
+			w	w	.|fp:hd	w	w	.	.	w	.	.|d:v:c	.	.	w												
+			w	.		.|c:c:K	w	.	.	w	.	w	.	.	w												
+			w	.	.	.	w	.	.	w	.	w	w:l	w:l	w												
+			w	.	.	.	w	w:l	w:l	w	.|d:h:c	w															
+			w	.	.	.	w:hd	.	.|c:c:G*2	w	.	w															
+			w	.	.	.	w	w:l	w:l	w	.	w	w:l	w								w	w	w	w	w	w
+			w	.	.	.	w	.	.	.	.	.	.	w								w	.|Msk:2	.	.	.	w
+			w	.	w:l	w:l	w	.	.	.	.	.	.	w	w	w	w	w	w	w	w	w	.	.	.	.	w
+			w	.	.	.	.	.	.	.	.	.	.	w:hd	.	.	.	.|Msp:1	.|Msp:1	.	.	.|d:v:c	.	.	.	.|c:c:G:3	w
+			w	w:l	w:l	w:l	w	.	.	.	.	.	.	w	w:l	w:l	w:l	w:l	w:l	w:l	w:l	w	.	.	.	.	w
+							w	.	.	.	.	.	.	w								w	.	.	.	.	w
+							w	w:l	w:l	w:l	w:l	w:l	w:l	w								w	.|Msk:2	.	.	.	w
+																						w	w:l	w:l	w:l	w:l	w

@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	font-family: "Metamorphous", Arial, serif; 
+	font-weight: 400; 
+	color: white;
+}
+
+body {
+	background-color: black;
+}
+
+.page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+	transition: left 1s;
+}
+
+.page.hidden {
+	left: -2000;
+}
+
+.start {
+	text-align: center;
+}
+
+.start .title {
+	font-size: 96px;
+	font-variant: small-caps;
+
+	width: 100%;
+	padding: 70px 0 70px 0;
+}
+
+.start .instructions {
+	font-size: 42px;
+	width: 100%;
+	color: #91a35F;
+}
+
+.start .character-gallery {
+	background-color: #131913;
+	padding: 30px;
+	width: 720px;
+	margin: 27px auto;
+	border-radius: 20px;
+	//border: 10px double #91a35F;
+	border: 10px double #999;
+}
+
+.start .character-gallery .character {
+	padding: 10px 30px;
+	font-size: 32px;
+	color: yellow;
+	display: inline-block
+}
+
+.start .character-gallery .character:hover {
+	background-color: #5B663B;
+	border-radius: 12px;
+}
+
+.start .character-gallery .character img {
+	width: 150px;
+	height: 150px;
+	padding-bottom: 15px;
+}
+
+.game {
+}
