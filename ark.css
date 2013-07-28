@@ -70,3 +70,25 @@ body {
 
 .game {
 }
+
+.character-sprite {
+	background-image: url(images/dwmonsprites.png);
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 135px;
+}
+
+.warrior {
+	background-position: -25px 0;
+	background-size: 2250px;
+}
+
+.elf {
+	background-position: -207px 0;
+	background-size: 2250px;
+}
+
+.mage {
+	background-position: -387px 0;
+	background-size: 2250px;
+}
