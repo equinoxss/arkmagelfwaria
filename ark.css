@@ -68,9 +68,6 @@ body {
 	padding-bottom: 15px;
 }
 
-.game {
-}
-
 .character-sprite {
 	background-image: url(images/dwmonsprites.png);
 	background-repeat: no-repeat;
@@ -91,4 +88,19 @@ body {
 .mage {
 	background-position: -387px 0;
 	background-size: 2250px;
+}
+
+.game {
+}
+
+.game .column{
+	display:inline-block;
+}
+
+.game .column .side{
+	width:320px;
+}
+
+.game .column .map{
+	width:640px;
 }
