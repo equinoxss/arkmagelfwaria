@@ -14,6 +14,7 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: 100%;
 	display: block;
 	transition: left 1s;
 }
@@ -91,16 +92,107 @@ body {
 }
 
 .game {
+	height: 100%;
 }
 
 .game .column{
-	display:inline-block;
+	//display:inline-block;
+	position: absolute;
+	height: 100%;
+	border: 1px solid white;
 }
 
-.game .column .side{
+.game .column.side {
 	width:320px;
+	background-color: #222;
 }
 
-.game .column .map{
+.game .column.left {
+	top: 0;
+	left: 0;
+}
+
+.game .column.right {
+	top: 0;
+	left: 960px;
+}
+
+.game .column.map{
 	width:640px;
+	top: 0;
+	left: 320px;
+}
+
+.character-portrait{
+	display: inline-block;
+	background-color: #131913;
+	padding-top: 1px;
+	height: 100px;
+	width: 100px;
+	margin: 5px;
+	border-radius: 5px;
+	border: 5px solid #999;
+}
+
+.character-picture{
+	background-image: url(images/dwmonsprites.png);
+	background-repeat: no-repeat;
+	width: 90px;
+	height: 90px;
+}
+
+.warrior2 {
+	background-position: -25px 1px;
+	background-size: 1600px;
+}
+
+.elf2 {
+	background-position: -154px 1px;
+	background-size: 1600px;
+}
+
+.mage2 {
+	background-position: -285px 1px;
+	background-size: 1600px;
+}
+
+.side .stats {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 13px;
+}
+
+.stats div {
+	margin-bottom: 2px;
+}
+
+.bar-well {
+	width: 280px;
+	margin: 10px 20px;
+	border: 1px solid #666;
+	background-color: #999;
+	border-radius: 10px;
+	height: 20px;
+}
+
+.health-bar {
+	margin: 2px 4px;
+	border: 1px solid darkRed;
+	background-color: red;
+	border-radius: 10px;
+	width: 90%;
+	height: 14px;
+}
+
+.mana-bar {
+	margin: 2px 4px;
+	border: 1px solid darkBlue;
+	background-color: blue;
+	border-radius: 10px;
+	width: 90%;
+	height: 14px;
+}
+
+#hp, #mp {
+	text-align: center;
 }

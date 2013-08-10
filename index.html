@@ -7,6 +7,7 @@
   <script src="map_node.js"></script>
   <script src="map_tiles.js"></script>
   <script src="map_monsters.js"></script>
+  <script src="player.js"></script>
   <script src="ark.js"></script>
   <script src="maps/ark.map.js"></script>
 </head>
@@ -20,17 +21,17 @@
       &#x2725; Choose your character class &#x2725;
     </div>
     <div class="character-gallery">
-      <div class="character">
+      <div class="character" data-character="warrior">
         <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBGbAA5O6Svc7lRXCkMKnDLyilucZoOor_ijn3Z54LdYzzabz-"> -->
         <div class="warrior character-sprite"></div>
         <div class="character-class">Fighter</div>
       </div>
-      <div class="character">
+      <div class="character" data-character="elf">
         <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBGbAA5O6Svc7lRXCkMKnDLyilucZoOor_ijn3Z54LdYzzabz-"> -->
         <div class="elf character-sprite"></div>
         <div class="character-class">Ranger</div>
       </div>
-      <div class="character">
+      <div class="character" data-character="mage">
         <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBGbAA5O6Svc7lRXCkMKnDLyilucZoOor_ijn3Z54LdYzzabz-"> -->
         <div class="mage character-sprite"></div>
         <div class="character-class">Mage</div>
@@ -39,11 +40,28 @@
   </div>
 
   <div class="game page hidden">
-    <div class="column side">
+    <div class="column side left">
+      <div class="character-portrait">
+        <div class="character-picture"></div>
+      </div>
+      <div class="stats">
+        <div id="attack">ATK: <span></span></div>
+        <div id="defense">DEF: <span></span></div>
+        <div id="agility">AGI: <span></span></div>
+        <div id="intelligence">INT: <span></span></div>
+      </div>
+      <div class="bars">
+        <div class="bar-well">
+          <div id="hp" class="health-bar">100</div>
+        </div>
+        <div class="bar-well">
+          <div id="mp" class="mana-bar">76</div>
+        </div>
+      </div>
     </div>
     <div class="column map">
     </div>
-    <div class="column side">
+    <div class="column side right">
     </div>
   </div>
 
