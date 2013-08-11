@@ -100,11 +100,13 @@ body {
 	position: absolute;
 	height: 100%;
 	border: 1px solid white;
+	margin: 2px;
+	padding: 10px;
 }
 
 .game .column.side {
-	width:320px;
-	background-color: #222;
+	width: 22%;
+	background-color: #000;
 }
 
 .game .column.left {
@@ -114,13 +116,14 @@ body {
 
 .game .column.right {
 	top: 0;
-	left: 960px;
+	right: 0px;
 }
 
 .game .column.map{
-	width:640px;
+	width: 55.1%;
 	top: 0;
-	left: 320px;
+	left: 22.3%;
+	background-color: #222;
 }
 
 .character-portrait{
@@ -159,38 +162,57 @@ body {
 .side .stats {
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 13px;
+	margin-top: 5px;
+	margin-left: 10px;
+	width: 52%;
 }
 
-.stats div {
+.stats .stat-row {
 	margin-bottom: 2px;
+	display: table-row;
+	width: 100%;
+}
+
+.stats .stat-row div {
+	display: table-cell;
+	width: 50%;
+}
+
+.stats #attack, .stats #defense, .stats #agility, .stats #intelligence {
+	//background-color: #555;
+	padding: 3px 6px;
+	//border-radius: 4px;
+	//box-shadow: #ccc -1px -1px 0px inset;
+}
+
+.bars {
+	padding-top: 1px;
 }
 
 .bar-well {
-	width: 280px;
-	margin: 10px 20px;
+	width: 90%;
+	margin: 10px auto;
 	border: 1px solid #666;
 	background-color: #999;
+	border-radius: 12px;
+	height: 30px;
+}
+
+.bar-well .bar {
+	margin: 3px 3px;
 	border-radius: 10px;
-	height: 20px;
+	width: 90%;
+	height: 22px;
 }
 
 .health-bar {
-	margin: 2px 4px;
 	border: 1px solid darkRed;
 	background-color: red;
-	border-radius: 10px;
-	width: 90%;
-	height: 14px;
 }
 
 .mana-bar {
-	margin: 2px 4px;
 	border: 1px solid darkBlue;
 	background-color: blue;
-	border-radius: 10px;
-	width: 90%;
-	height: 14px;
 }
 
 #hp, #mp {

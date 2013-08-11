@@ -12,9 +12,9 @@ $(document).ready(function() {
 
 		$(".character-picture").addClass(player.imageClass());
 
-		$("#attack span").text(player.attack.join("-"));
-		$("#defense span").text(player.defense);
-		$("#agility span").text(player.agility);
-		$("#intelligence span").text(player.intelligence);
+		$("#attack").text(player.attack.join("-"));
+		$("#defense").text(player.defense);
+		$("#agility").text(player.agility);
+		$("#intelligence").text(player.intelligence);
 	}
 });
