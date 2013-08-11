@@ -39,40 +39,22 @@ $(document).ready(function() {
 	// Map functions
 
 	initMap = function() {
-		window.map = { viewX: 0, viewY: 0, viewW: 15, viewH: 13 };
-		mapData[1][1].layer1 = player;
-		drawMap();
-	}
-
-	drawMap = function() {
-		var mapEl = $("#map"),
-			node = null,
-			top = 0,
-			image = null;
-			empty = new Empty();
-		for (var y = map.viewY; y < map.viewY + map.viewH; y++) {
-			top = y * 50 + 21;
-			mapEl.append('<div class="row" style="top:' + top + 'px"></div>');
-			row = mapEl.children().last();
-			for (var x = map.viewX; x < map.viewX + map.viewW; x++) {
-				row.append('<div class="node"></div>');
-				cell = row.children().last();
-				node = mapData[y][x];
-				if (node && node.visited) {
-					if (node.layer0) {
-						cell.append('<img class="layer0" src="images/' + node.layer0.image() + '"/>');
-					}
-					if (node.layer1) {
-						cell.append('<img class="layer1" src="images/' + node.layer1.image() + '"/>');
-					}
-				} else {
-					cell.append('<img class="layer0" src="images/' +  empty.image() + '"/>');
-				}
-				
-			}
-		}
+		window.map = new Map();
+		map.draw();
 	}
 
 	// Game loop functions
+
+	$(document).keypress(function(event){
+		var dx = 0, dy = 0;
+		switch (event.charCode) {
+			case 119: dy -= 1; break;
+			case 100: dx += 1; break;
+			case 115: dy += 1; break;
+			case 97: dx -= 1; break;
+		}
+		map.shift(dx, dy);
+		map.draw();
+	});
 
 });
