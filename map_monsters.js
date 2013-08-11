@@ -4,7 +4,7 @@ var Skeleton = function(level) {
 }
 
 Skeleton.prototype.image = function() {
-	return "images/skeleton.png";
+	return "skeleton.png";
 }
 
 var Spider = function(level) {
@@ -13,5 +13,5 @@ var Spider = function(level) {
 }
 
 Spider.prototype.image = function() {
-	return "images/spider.png";
+	return "spider.png";
 }

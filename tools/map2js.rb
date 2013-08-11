@@ -3,14 +3,15 @@
     "c" => "Chest",
     "d" => "Door",
     "fp" => "Fireplace",
-    " " => "Empty",
+    "/" => "Empty",
+    "*" => "Player",
 
     "Msk" => "Skeleton",
     "Msp" => "Spider"
   }
 
 def process_layer(str)
-  return nil if str.nil?
+  return nil if str.nil? or str.empty?
 
   args = str.split(":")
 
@@ -30,12 +31,15 @@ File.open(ARGV[0]) do |f|
   f.readlines.each do |line|
 
     row = []
-    line.strip.split("\t").each do |cell|
+    #p "ROW: #{line}\n"
+    line.rstrip().split("\t").each do |cell|
+
+      #p "CELL: #{cell}\n"
 
       # layers separted by |
       layers = cell.split("|")
 
-      pl0 = process_layer(layers[0]) || { :klass => @@classes[" "], :args => "" }
+      pl0 = process_layer(layers[0]) || { :klass => @@classes["/"], :args => "" }
       pl1 = process_layer(layers[1]) 
 
       if pl0[:klass] == "Wall"

@@ -3,7 +3,7 @@ var Empty = function() {
 }
 
 Empty.prototype.image = function() {
-	return "images/blank.png";
+	return "blank.png";
 }
 
 //================================================
@@ -22,9 +22,9 @@ var Wall = function(opt1, opt2) {
 
 Wall.prototype.image = function() {
 	if (this.low) {
-		return "images/wall_low.png";
+		return "wall_low.png";
 	} else {
-		return "images/wall.png";
+		return "wall.png";
 	}
 }
 
@@ -35,7 +35,7 @@ var Floor = function() {
 }
 
 Floor.prototype.image = function() {
-	return "images/wood_floor.png"
+	return "floor4.png"
 }
 
 //================================================
@@ -46,7 +46,7 @@ var Door = function(orientation, position) {
 }
 
 Door.prototype.image = function() {
-	return "images/door_" + this.orientation + this.position +".png"
+	return "door_" + this.orientation + this.position +".png"
 }
 
 //================================================
@@ -60,7 +60,7 @@ var Fireplace = function(opt1) {
 }
 
 Fireplace.prototype.image = function() {
-	return "images/fireplace.png"
+	return "fireplace.png"
 }
 
 //================================================
@@ -71,6 +71,6 @@ var Chest = function(position, contents) {
 }
 
 Chest.prototype.image = function() {
-	return "images/chest_" + this.position +".png"
+	return "chest_" + this.position +".png"
 }
 
