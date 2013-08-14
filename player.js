@@ -1,13 +1,18 @@
-var Player = function(character) {
+var Player = function(character, x, y) {
 	this.character = character;
+	this.experience = 0;
+	this.x = x;
+	this.y = y;
+
+	mapData[y][x].layer1 = this;
 
 	if (character == "warrior") {
 		this.attack = [1,10];
 		this.defense = 10;
 		this.agility = 10;
 		this.intelligence = 10;
-		this.hp = 8;
-		this.mp = 2;
+		this.hp = this.currentHp = 8;
+		this.mp = this.currentMp = 2;
 		this.hpRecoveryRate = 0.1;
 		this.mpRecoveryRate = 0.01;
 	} else if (character == "elf") {
@@ -15,8 +20,8 @@ var Player = function(character) {
 		this.defense = 10;
 		this.agility = 10;
 		this.intelligence = 10;
-		this.hp = 6;
-		this.mp = 4;
+		this.hp = this.currentHp = 6;
+		this.mp = this.currentMp = 4;
 		this.hpRecoveryRate = 0.07;
 		this.mpRecoveryRate = 0.25;
 	} else {
@@ -24,8 +29,8 @@ var Player = function(character) {
 		this.defense = 10;
 		this.agility = 10;
 		this.intelligence = 10;
-		this.hp = 4;
-		this.mp = 8;
+		this.hp = this.currentHp = 4;
+		this.mp = this.currentMp = 8;
 		this.hpRecoveryRate = 0.05;
 		this.mpRecoveryRate = 0.5;
 	}
@@ -70,4 +75,8 @@ Player.prototype.rest = function() {
 Player.prototype.heal = function(amount) {
 	this.currentHp += amount;
 	this.capStats();
+}
+
+Player.prototype.move = function(dx,dy) {
+
 }

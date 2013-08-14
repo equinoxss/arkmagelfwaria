@@ -28,6 +28,10 @@ Wall.prototype.image = function() {
 	}
 }
 
+Wall.prototype.collision = function() {
+	return {condition:"solid"};
+}
+
 //================================================
 
 var Floor = function() {
@@ -43,10 +47,23 @@ Floor.prototype.image = function() {
 var Door = function(orientation, position) {
 	this.orientation = orientation;
 	this.position = position;
+	this.locked = false;
 }
 
 Door.prototype.image = function() {
 	return "door_" + this.orientation + this.position +".png"
+}
+
+Door.prototype.collision = function() {
+	if (this.locked) {
+		return {condition:"locked"};
+	} else if (this.position == "c") {
+		this.position = "o";
+		return {condition:"opened"};
+	} else if (this.position == "o") {
+		return {condition:"passthru"};
+	}
+	return {condition:"locked"};	
 }
 
 //================================================
@@ -61,6 +78,10 @@ var Fireplace = function(opt1) {
 
 Fireplace.prototype.image = function() {
 	return "fireplace.png"
+}
+
+Fireplace.prototype.collision = function() {
+	return {condition:"solid"};
 }
 
 //================================================

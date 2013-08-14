@@ -15,7 +15,7 @@ $(document).ready(function() {
 	// Player functions
 
 	initPlayer = function(character) {
-		window.player = new Player(character);
+		window.player = new Player(character, 1, 1);
 
 		$(".character-picture").addClass(player.imageClass());
 		drawPlayerStats();
@@ -27,13 +27,13 @@ $(document).ready(function() {
 		$("#defense").text(player.defense);
 		$("#agility").text(player.agility);
 		$("#intelligence").text(player.intelligence);
-		$("#hitpts").text(player.hp);
+		$("#experience").text(player.experience);
 		$("#magicpts").text(player.mp);
 	}
 
 	drawPlayerHealth = function() {
-		$("#hp").css('width', player.hpPercentage() + "%").text(player.hp);
-		$("#mp").css('width', player.mpPercentage() + "%").text(player.mp);
+		$("#hp").css('width', player.hpPercentage() + "%").text(player.currentHp + " / " + player.hp);
+		$("#mp").css('width', player.mpPercentage() + "%").text(player.currentMp + " / " +player.mp);
 	}
 
 	// Map functions
@@ -53,8 +53,10 @@ $(document).ready(function() {
 			case 115: dy += 1; break;
 			case 97: dx -= 1; break;
 		}
-		map.shift(dx, dy);
-		map.draw();
+		//map.shift(player, dx, dy);
+		if (map.move(player, dx,dy)) {
+			map.draw();
+		}
 	});
 
 });
