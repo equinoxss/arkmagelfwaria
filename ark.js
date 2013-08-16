@@ -55,6 +55,7 @@ $(document).ready(function() {
 		}
 		//map.shift(player, dx, dy);
 		if (map.move(player, dx,dy)) {
+			map.adjustView(player);
 			map.draw();
 		}
 	});
