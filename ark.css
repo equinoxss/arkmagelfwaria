@@ -187,6 +187,7 @@ body {
 
 .bars {
 	padding-top: 1px;
+	padding-bottom: 1px;
 }
 
 .bar-well {
@@ -217,6 +218,30 @@ body {
 #hp, #mp {
 	text-align: center;
 }
+
+.worn {
+	padding: 10px 0;
+}
+
+.worn .items {
+	margin: 5px auto;
+	width: 227px;
+}
+
+.worn .items div {
+	vertical-align: top;
+	display: inline-block;
+	width: 72px;
+	height: 72px;
+	padding: 10px 10px;
+	border: 1px solid #666;
+	border-radius: 8px;
+}
+
+.worn img {
+	border-radius: 8px;
+}
+
 
 .map {
 	width: 90%;

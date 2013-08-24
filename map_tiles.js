@@ -8,6 +8,19 @@ Empty.prototype.image = function() {
 
 //================================================
 
+var Container = function() {
+}
+
+Container.prototype.canAttack = function() {
+	return false;
+}
+
+Container.prototype.canOpen = function() {
+	return true;
+}
+
+//================================================
+
 var Wall = function(opt1, opt2) {
 	this.low = false;
 	this.hiddenDoor = false;
@@ -87,6 +100,7 @@ Fireplace.prototype.collision = function() {
 //================================================
 
 var Chest = function(position, contents) {
+	$.extend(this, Container.prototype);
 	this.position = position;
 	this.contents = contents;
 }

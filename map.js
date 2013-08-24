@@ -8,6 +8,9 @@ var Map = function() {
 	var widest = 0;
 	for (var r = 0; r < mapData.length; r++) {
 		widest = Math.max(widest, mapData[r].length);
+		for (var c = 0; c < mapData[r].length; c++) {
+			mapData[r][c].setCoordinates(r,c);
+		}
 	}
 
 	this.mapW = widest;
@@ -26,7 +29,7 @@ Map.prototype.draw = function() {
 		mapEl.append('<div class="row" style="top:' + top + 'px"></div>');
 		row = mapEl.children().last();
 		for (var x = this.viewX; x < this.viewX + this.viewW; x++) {
-			row.append('<div class="node"></div>');
+			row.append('<div class="node" data-coords="' + [x,y].join(",") + '"></div>');
 			cell = row.children().last();
 			node = mapData[y][x];
 			if (node && node.visited) {

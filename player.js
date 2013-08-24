@@ -15,6 +15,13 @@ var Player = function(character, x, y) {
 		this.mp = this.currentMp = 2;
 		this.hpRecoveryRate = 0.1;
 		this.mpRecoveryRate = 0.01;
+		this.worn = {
+			head: null,
+			body: new Tunic(),
+			feet: new LeatherSandals(),
+			left: null,
+			right: new ShortSword()
+		}
 	} else if (character == "elf") {
 		this.attack = [1,10];
 		this.defense = 10;
@@ -24,6 +31,13 @@ var Player = function(character, x, y) {
 		this.mp = this.currentMp = 4;
 		this.hpRecoveryRate = 0.07;
 		this.mpRecoveryRate = 0.25;
+		this.worn = {
+			head: null,
+			body: new Tunic(),
+			feet: new LeatherSandals(),
+			left: null,
+			right: new ShortSword()
+		}
 	} else {
 		this.attack = [1,10];
 		this.defense = 10;
@@ -33,7 +47,16 @@ var Player = function(character, x, y) {
 		this.mp = this.currentMp = 8;
 		this.hpRecoveryRate = 0.05;
 		this.mpRecoveryRate = 0.5;
+		this.worn = {
+			head: null,
+			body: new Robe(),
+			feet: new LeatherSandals(),
+			leftHand: null,
+			rightHand: new WalkingStaff()
+		}
 	}
+
+	this.inventory = new Array(10);
 }
 
 Player.prototype.image = function() {

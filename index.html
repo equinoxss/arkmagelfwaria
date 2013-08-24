@@ -7,6 +7,8 @@
   <script src="map_node.js"></script>
   <script src="map_tiles.js"></script>
   <script src="map_monsters.js"></script>
+  <script src="weapons.js"></script>
+  <script src="clothing.js"></script>
   <script src="player.js"></script>
   <script src="maps/ark.map.js"></script>
   <script src="map.js"></script>
@@ -23,17 +25,14 @@
     </div>
     <div class="character-gallery">
       <div class="character" data-character="warrior">
-        <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBGbAA5O6Svc7lRXCkMKnDLyilucZoOor_ijn3Z54LdYzzabz-"> -->
         <div class="warrior character-sprite"></div>
         <div class="character-class">Fighter</div>
       </div>
       <div class="character" data-character="elf">
-        <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBGbAA5O6Svc7lRXCkMKnDLyilucZoOor_ijn3Z54LdYzzabz-"> -->
         <div class="elf character-sprite"></div>
         <div class="character-class">Ranger</div>
       </div>
       <div class="character" data-character="mage">
-        <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBGbAA5O6Svc7lRXCkMKnDLyilucZoOor_ijn3Z54LdYzzabz-"> -->
         <div class="mage character-sprite"></div>
         <div class="character-class">Mage</div>
       </div>
@@ -69,6 +68,24 @@
         </div>
         <div class="bar-well">
           <div id="mp" class="bar mana-bar">76</div>
+        </div>
+      </div>
+      <hr/>
+      <div class="worn">
+        <div class="top items">
+          <div><img></img></div>
+          <div><img id="head"></img></div>
+          <div><img></img></div>
+        </div>
+        <div class="middle items">
+          <div><img id="left-hand"></img></div>
+          <div><img id="body"></img></div>
+          <div><img id="right-hand"></img></div>
+        </div>
+        <div class="bottom items">
+          <div><img></img></div>
+          <div><img id="feet"></img></div>
+          <div><img></img></div>
         </div>
       </div>
     </div>
